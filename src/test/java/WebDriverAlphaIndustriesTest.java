@@ -31,11 +31,8 @@ public class WebDriverAlphaIndustriesTest{
     @Test
     public void AddItemsToCart() throws InterruptedException {
         driver.get("https://www.alphaindustries.com/");
-        wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.id("Stroke-3"))));
-        WebElement closeAdvButton = driver.findElement(By.id("Stroke-3"));
-        closeAdvButton.click();
         wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.id("geCloseBtn"))));
-        closeAdvButton = driver.findElement(By.id("geCloseBtn"));
+        WebElement closeAdvButton = driver.findElement(By.id("geCloseBtn"));
         closeAdvButton.click();
         WebElement searchButton = driver.findElement(By.xpath("//*[@id='alpha-login-bar-right']/div[3]/div/a"));
         searchButton.click();
